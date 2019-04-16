@@ -1,13 +1,16 @@
 package ioc;
 
-import org.springframework.beans.factory.config.BeanDefinition;
 
 public interface BeanFactory {
 
-	<T> T getBean(String beanName);
+    <T> T getBean(String beanName);
 
-	BeanDefinition getBeanDefinition(String beanName);
+    BeanDefinition getBeanDefinition(String beanName);
 
-	BeanDefinition[] getBeanDefinitionNames();
+    BeanDefinition[] getBeanDefinitionNames();
+
+    void run(String... packages) throws Exception;
+
+    void registerBean(String beanName, Class<?> annotatedClass) throws Exception;
 
 }

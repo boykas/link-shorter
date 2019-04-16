@@ -1,9 +1,12 @@
-package shorter;
+package shorter.repository;
+
+import ioc.ApplicationBean;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
+@ApplicationBean
 public class InMemShortLinksRepo implements ShortLinksRepo {
 
 	private Map<String, String> links = new HashMap<>();
